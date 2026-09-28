@@ -1,0 +1,55 @@
+PICOL STUDIO - CÓMO PONER TUS VIDEOS Y PUBLICAR
+
+1. PONER TUS VIDEOS
+   Abre index.html con el Bloc de notas (o VS Code) y busca:  const VIDEOS = [
+   Cada línea es un trabajo. Tienes dos opciones:
+
+   A) YouTube: pega el link en url: "..."
+      { titulo: "Comercial iPhone", detalle: "Comercial spec", tipo: "comercial", url: "https://www.youtube.com/watch?v=XXXX", archivo: "", vertical: false },
+
+   B) Archivo de video (.mp4): mete el video en la carpeta videos y escribe su nombre en archivo: "..."
+      { titulo: "Logo animado", detalle: "Motion graphics", tipo: "motion", url: "", archivo: "videos/logo-01.mp4", vertical: false },
+      - En la cinta se reproduce solo, en loop y sin sonido.
+      - Al tocarlo se abre en grande, con sonido y controles.
+      - Funciona incluso abriendo la página desde tu computador (sin publicar).
+      - Si pones url Y archivo, se usa el .mp4 y el link de YouTube queda como botón "Ver en YouTube".
+      - portada: "videos/logo-01.jpg" (opcional) es la imagen que se ve mientras el video carga.
+
+   - vertical: true si el video es 9:16 (short o reel).
+   - tipo: "comercial", "motion" o "texto" (es para los filtros; los filtros sin videos se esconden solos).
+   - Los trabajos que dejes vacíos no aparecen en la página publicada
+     (solo los ves tú cuando la abres desde tu computador, como aviso).
+
+2. ¿YOUTUBE O .MP4?
+   - YouTube: no pesa nada en tu página y aguanta videos largos. Ideal para los comerciales.
+   - .mp4: se ve más "tuyo" (sin logo de YouTube) y se mueve solo en la cinta. Ideal para logos y
+     animaciones cortas. Pero cada archivo pesa: exporta en H.264, 1080p, y trata de que quede
+     por debajo de 25 MB (es el límite al subir archivos desde la web de GitHub; con Git el límite es 100 MB).
+     Si pesa mucho, pásalo por HandBrake (preset "Fast 1080p30", calidad RF 24-26).
+
+3. EL "ERROR 153" DE YOUTUBE
+   Sale cuando abres index.html con doble clic (la dirección empieza por file:// o D:/...).
+   Así YouTube no sabe desde qué página se reproduce y bloquea el video. NO es un error de tu página.
+   - Publicada en internet (GitHub Pages) el video se reproduce normal, dentro de la página.
+   - En tu computador, la página ahora te muestra un aviso con el botón "Ver en YouTube".
+   - Si quieres probar YouTube en tu computador: abre la carpeta en VS Code, instala la extensión
+     "Live Server" y dale "Open with Live Server".
+   - En YouTube Studio, cada video debe estar como Público o No listado (nunca Privado)
+     y con "Permitir inserción" activado.
+
+4. PUBLICAR (GITHUB PAGES)
+   La página publicada vive en el repositorio PÚBLICO cifuentesantiago579-code.github.io
+   y se ve en: https://cifuentesantiago579-code.github.io
+   - La primera vez: crea el repositorio en https://github.com/new con el nombre exacto
+     cifuentesantiago579-code.github.io, márcalo como Public y NO le agregues README.
+   - Sube ahí el contenido de esta carpeta: en el repositorio vacío toca "uploading an existing file",
+     arrastra index.html, las carpetas assets y videos y los demás archivos > Commit changes.
+   - En 1 o 2 minutos queda en línea. Si no aparece: Settings > Pages > "Deploy from a branch" >
+     rama main, carpeta / (root) > Save.
+   - Todo lo que esté en ese repositorio lo puede ver cualquiera: no pongas ahí nada privado.
+   - Si algún día cambias la dirección (por ejemplo, un dominio propio), cambia también las líneas
+     og:url y og:image al inicio de index.html: son la vista previa al compartir el link.
+
+5. ACTUALIZAR
+   Cada vez que cambies algo, vuelve a subir index.html (y los videos nuevos) al repositorio
+   cifuentesantiago579-code.github.io y la página se actualiza sola en 1 o 2 minutos.

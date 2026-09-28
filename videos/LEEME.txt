@@ -1,0 +1,9 @@
+Pon aquí tus videos (.mp4, H.264, 1080p). Si los subes desde la web de GitHub, cada uno debe pesar menos de 25 MB.
+Luego en index.html, en la lista VIDEOS, escribe por ejemplo: archivo: "videos/logo-01.mp4", portada: "videos/logo-01.jpg"
+Funcionan incluso abriendo la página desde tu computador, sin publicarla.
+
+Los que ya están aquí (comprimidos para web, se ven igual y cargan rápido):
+- bmw-motion.mp4 (2,6 MB) + bmw-motion.jpg
+- burger-burst.mp4 (3,1 MB) + burger-burst.jpg
+- picol-studio-intro.mp4 (2,4 MB) + picol-studio-intro.jpg
+- fenix-system-logo.mp4 (1,8 MB) + fenix-system-logo.jpg
